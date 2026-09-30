@@ -1,0 +1,383 @@
+# fpf-spec — First Principles Framework (FPF) - Core Conceptual Specification (FPF)
+
+355 FPF core patterns. Address rule: pattern `<A..I>.<rest>` -> `spec://ai.lev/fpf-spec/contract/<A..I>-<rest>#root` (every dot of the id becomes a dash: `A.0` -> `contract/A-0`); depth sections: `.../source/<id>#depth`; sections: `#problem-frame`, `#solution`, `#conformance-checklist`, `#dependencies`. Full Table of Contents with keywords and dependencies: spec://ai.lev/fpf-spec/pub/TOC#root. Search and reading recipes: spec://ai.lev/fpf-common/skills/fpf-lookup/SKILL#root.
+
+Patterns (id — title):
+
+- Part A - Kernel Architecture Cluster
+  - `A.0` — Generative Search Onboarding Glossary (NQD & E/E‑LOG)
+- Cluster A.I - Foundational Ontology
+  - `A.1` — Recognize a Whole with Parts (U.Holon and Admitted Holon Kinds)
+  - `A.1.RI` — Reidentifying an Object across Observations
+  - `A.1.1` — Bounded Model-Use Structure: Applicability, Use and Expression Coherence (DDD Bounded Context)
+  - `A.1.SCR` — Finding the Acting or Changed System
+  - `A.1.CSD` — Discovering Systems That May Bear Consequences
+  - `A.1.STM` — Find the First Unsupported Project Dependency (System-Thinking Long Mantra)
+  - `A.2` — System-Role Kinds and Assignments
+  - `A.2.1` — U.SystemRoleAssignment - Contextual System-Role Assignment
+  - `A.2.2` — System Capability: Conditions, Measures and Fit
+  - `A.2.3` — `U.PromiseContent` — Promised Outcomes and Acceptance Criteria
+  - `A.2.4` — Episteme Evidence-Use and Status-Use Relations
+  - `A.2.5` — SystemRoleAssignmentStateRelation - Assignment-State Recognition for Work Admission
+  - `A.2.6` — Unified Scope Mechanism (USM): Test Scope Membership and Combine Scopes
+  - `A.2.7` — SystemRoleKindRelationStructure - Relations among System-Role Kinds
+  - `A.2.8` — `U.Commitment` — Individual Duties to Act or Refrain
+  - `A.2.8.PER` — Granted Permission, Exercise, and Non-Prohibition
+  - `A.2.9` — `U.SpeechAct` — Communicative Work and Its Intended Use
+- Cluster A.II - Transformation Engine
+  - `A.3` — Transformer Quartet: Distinguish Work, Performer, Method and Method Description
+  - `A.3.1` — U.Method: Reusable Way of Doing with Explicit Applicability
+  - `A.3.1.MR` — Candidate-Method Recovery from Work Evidence
+  - `A.3.2` — U.MethodDescription: Description Episteme for a Way of Doing
+  - `A.3.3` — U.Dynamics: State-Space and Transition-Law Episteme
+  - `A.3.3.CC` — Construct a Configuration Description under Constraints
+  - `A.3.3.TR` — Construct a Rule for State Change
+  - `A.3.3.PI` — Retain the Information Needed for Prediction
+  - `A.3.4` — U.Transformation: Actual Bounded Change Under Conditions
+  - `A.3.4.P` — Transformation Wording Repair: Recover Objects and Claims
+- Cluster A.III - Time & Evolution
+  - `A.4` — Compare a System's Intended Design with Its Operating Conditions
+- Cluster A.IV - Kernel Modularity
+  - `A.5` — Open-Ended FPF Kernel and Extension Layering
+- Cluster A.IV.A - Signature Stack & Boundary Discipline (`A.6.*`)
+  - `A.6` — Signature Stack: Classify and Place Boundary Claims
+  - `A.6.RSIG` — Recognition Signatures: Find the Defining Episteme for a Description
+  - `A.6.B` — Boundary Norm Square (Laws / Admissibility / Deontics / Work‑Effects)
+  - `A.6.C` — Contract Unpacking for Boundaries
+  - `A.6.REL` — Relation Obtaining and Individuation: Distinguish Occurrences When Needed
+  - `A.6.0` — U.Signature - Reusable Law-Governed Declaration Episteme
+  - `A.6.1` — U.Mechanism - Reusable Law-Governed Operation Declaration
+  - `A.6.2` — Effect-Free Episteme Morphing: Laws for Mathematical Relations Between Epistemes
+  - `A.6.3` — Episteme viewing - EntityOfConcern-preserving episteme construction
+  - `A.6.3.CSC` — Controlled Semantic Coarsening: Shorten an Account for a Bounded Use
+  - `A.6.3.CR` — ConservativeRetextualization: EntityOfConcern-Preserving Textual Re-Expression
+  - `A.6.3.RT` — Representation-Scheme Transition: Change Representation of the Same EntityOfConcern
+  - `A.6.3.RT.OE` — Construct an Operative Expression
+  - `A.6.3.NAR` — Structure-to-Narrative Rendering
+  - `A.6.4` — EntityOfConcern Retargeting: Judge a Bounded Use Across Different Entities
+  - `A.6.P` — Relational Precision Restoration - Recovering Direct Relations from Under-Specified Claims
+  - `A.6.P.RI` — Recover Agent-Relative References for Action
+  - `A.6.P.WMR` — Exact Relation Recovery for Method and Work Claims
+  - `A.6.RCD` — Needed Relation Claim Derivation and Relation-Kind Admission
+  - `A.6.RSIR` — Relation, Signature, Interface, Role, and Slot Precision Restoration
+  - `A.6.A` — Affordance and Action-Invitation Precision Restoration (ACT-INV)
+  - `A.6.F` — Function and Functional Precision Restoration (RPR-FUNCTION)
+  - `A.6.M` — Module and Interface Claim Repair
+  - `A.6.5` — Relation-Declaration Slot Discipline - SlotKind, ValueKind, RefKind, and participant-designation discipline
+  - `A.6.6` — Base Declaration Discipline: Say Exactly What Something Depends On
+  - `A.6.7` — `MechSuiteDescription` — Shared Conditions for Joint Use of Distinct Mechanisms
+  - `A.6.9` — Cross-Context Sameness Disambiguation - Restoring the concrete claim behind "same", "equivalent", and "align" (RPR-XCTX)
+  - `A.6.S` — TargetSignature and optional ConstructorSignature - demand-driven signature engineering
+  - `A.6.H` — Wholeness Language Unpacking — RPR-WHOLE
+- Cluster A.V - Constitutional Principles of the Kernel
+  - `A.7` — Strict Distinction: Repair Conflations of FPF Objects (Clarity Lattice)
+  - `A.7.1` — Consequence-Guided Ontological Problem Solving
+  - `A.7.2` — FPF Ontology-Premise Reconciliation
+  - `A.7.CP` — Constructive-Premise Compact and Reasoning-Basis Use
+  - `A.8` — Universal Core Principle: Test a U-Kind Across Domains
+  - `A.9` — Choose and Check an Aggregation Law for the Intended Result
+  - `A.10` — Evidence Graph Referring: Claim-Bound Evidence and Provenance Graph
+  - `A.10.1` — Revalidate Affected Uses When a Relied-on Source Changes
+  - `A.11` — Ontological Parsimony
+  - `A.11.OP` — Decision-Relevant Least Action and Operational Parsimony: Test a Proposed Requirement
+  - `A.12` — Acting-Side Externalization and Reflexive Split: Identify Who Acts on What
+  - `A.13` — The Agential Role & Agency Spectrum
+  - `A.14` — Advanced Mereology: Components, Portions, Aspects & Phases
+  - `A.15` — System-Role–Method–Work Alignment
+  - `A.15.1` — `U.Work`: Dated Performed Work Occurrence
+  - `A.15.2` — `U.WorkPlan`: Plan Content for Coordinating Future Work
+  - `A.15.3` — `SlotFillingsPlanItem`: Plan a Value for an Existing Declaration Member
+  - `A.15.4` — Work-Relevant Appearance-Based Reliance Repair
+  - `A.15.5` — Work-Entry Readiness and Full-Kit Preparation
+  - `A.15.6` — Recover What Project, Process, or Case Wording Refers To
+  - `A.15.7` — Situation-Responsive Work Steering and Next-Action Selection
+  - `A.15.8` — Work-Performance Configuration and Recovery Testing
+  - `A.15.9` — Use or Request a Bounded Result from Another Practice
+  - `A.15.10` — Resume Interrupted Work
+  - `A.15.11` — Make Applicable Methods Noticeable in Work
+  - `A.15.PROD` — Production Work, Entity-Identity Inception, and Production Completion Recovery
+  - `A.16` — Language-State Moves: Choose the Next Publication and Use of a Cue or Claim
+  - `A.16.0` — Keep an Episteme's Language-State and Publication History Recoverable
+  - `A.16.1` — `PreArticulationCuePack`: Preserve an Early Cue Before Choosing Its Use
+  - `A.16.2` — Reopen, SketchBackoff, Respecify, or Retire a Language-State Publication
+  - `A.17` — Canonical “Characteristic” (A.CHR-NORM): Name What Is Measured
+  - `A.18` — Minimal CSLC in Kernel (Characteristic ⟷ Scale ⟷ Level ⟷ Coordinate) (A.CSLC‑KERNEL)
+  - `A.19` — CharacteristicSpace: Coordinates, State Predicates and Dynamics Hook (A.CHR‑SPACE)
+  - `A.19.ECS` — Evaluation CharacteristicSpace Construction: Define What Counts as Better
+  - `A.19.SPR` — Repair State and Status Wording
+  - `A.19.SOURCE-SET-SPACE-SUBSTRATE` — Source-Set and Search/Outcome-Space Substrate
+  - `A.19.DECLARED-SUBSTRATE-INTERPRETIVE-VIEW` — Interpretive Views of Declared Source Sets and Search/Outcome Spaces
+  - `A.19.CN` — CN-frame: Specify and Maintain Comparability and Normalization
+  - `A.19.CHR` — CHRMechanismSuite: Shared Rules for Characterization and Selection
+  - `A.19.UNM` — Normalize Coordinate Values under Declared Invariants (UNM)
+  - `A.19.UINDM` — Indicatorization (UINDM): Select Indicators Under a Declared Policy
+  - `A.19.USCM` — Unified Scoring Mechanism, USCM
+  - `A.19.ULSAM` — Unified Lawful Scale Aggregation Mechanism (ULSAM)
+  - `A.19.CPM` — Compare Admitted Profiles under a Declared Comparator (CPM)
+  - `A.19.SelectorMechanism` — Unified Selection Kernel, SelectorMechanism
+  - `A.20` — Constraint Validity for Transformation Steps
+  - `A.21` — Gate Decisions from Independent Check Results
+  - `A.22` — Structure and Structural Views (STRUCT-CAL)
+  - `A.22.CGUS` — Which Continuations Are Available? — Constraint-Governed Unfolding Structure (CGUS)
+- Part B - Trans-disciplinary Reasoning Cluster
+  - `B.1` — Holon Aggregation and Part-Whole Construction
+  - `B.1.1` — Dependency Structure and Relation Grounding
+  - `B.1.2` — Coordinate Decisions About System Aggregation and Delimitation
+  - `B.1.3` — Knowledge Aggregation (Γ_epist): Synthesis and Target-Scheme Compilation
+  - `B.1.4` — Specify Order-Sensitive or Temporal Aggregation (Γ_ctx, Γ_time)
+  - `B.1.5` — Gamma_method - Order-Sensitive Method Composition and Work Enactment
+  - `B.1.5.EW` — Recover How Constituent Actions Enact Encompassing Work
+  - `B.1.5.RS` — Evaluate a Constituent Method Replacement in Its Encompassing Uses
+  - `B.1.6` — Work-Resource Aggregation
+  - `B.2` — Meta-Holon Transition - Whole Reidentification
+  - `B.2.P` — Clarify Emergence and Meta-Holon Transition (MHT) Claims
+  - `B.2.2` — Meta-System Transition: Test the Proposed New Whole as a System
+  - `B.2.3` — Meta-Holon Transition With Episteme Result
+  - `B.2.4` — Do Capability or Functioning Changes Require Whole Reidentification?
+  - `B.2.5` — Supervisor-Subholon Feedback Relation
+  - `B.3` — Is This Claim Supported for This Use? — Trust and Assurance Calculus
+  - `B.3.3` — Assurance Subtypes & Levels
+  - `B.3.4` — Can Earlier Evidence Still Support This Use? — Evidence Decay and Epistemic Debt
+  - `B.3.5` — Assurance Grounding for Working-Model Relation Claims (CT2R-LOG)
+  - `B.4` — Coordinate Repeated Adaptation (Canonical Evolution Loop)
+  - `B.4.1` — Publish Candidate Routes for a Stabilized Cue (RoutedCueSet)
+  - `B.5` — Choose the Next Reasoning Contribution (Canonical Reasoning Cycle)
+  - `B.5.EA` — Articulate a Working Distinction from Experience
+  - `B.5.MPC` — Connect Physical, Mathematical and Computational Reasoning
+  - `B.5.MPC.R` — Repair a Physical-Mathematical-Computational Connection
+  - `B.5.RC` — Recover a Construction from Its Description
+  - `B.5.RA` — Recover an Argument for Its Next Use
+  - `B.5.RR` — Revise Reasoning After a Premise or Question Changes
+  - `B.5.FM` — Construct a First Model for the Working Question
+  - `B.5.TU` — Construct a Working Use of an Unfamiliar Theory
+  - `B.5.TC` — Compare Theoretical Accounts for a Working Question
+  - `B.5.QD` — Develop a New Question from a Result or Construction
+  - `B.5.QD.CF` — Reformulate a Problem by Examining Its Conflicting Assumptions
+  - `B.5.1` — Coordinate Development States: Explore → Shape → Evidence → Operate
+  - `B.5.2` — Generate and Compare Candidate Explanations (Abductive Loop)
+  - `B.5.2.0` — Question Form for Entering Abduction (`U.AbductivePrompt`)
+  - `B.5.2.1` — Instrument Abductive Hypothesis Generation with Novelty–Quality–Diversity (NQD)
+  - `B.5.3` — Interpret Domain Vocabulary for an FPF Claim (Domain-Concept Bridge)
+  - `B.5.4` — Recognize a Reusable Concept in a Concrete Situation
+  - `B.5.PI` — Initiate Inquiry from Ongoing Work
+- Cluster C.I – Core CALs / LOGs / CHRs
+  - `C.2` — Epistemic holon composition (KD-CAL)
+  - `C.2.1` — `U.Episteme`: Constitution, Empirical Grounding, and Edition Relations
+  - `C.2.P` — Clarify Episteme, Publication, and Source Wording (Epistemic Precision Restoration)
+  - `C.2.2` — Reliability R in the F–G–R triad
+  - `C.2.2a` — `U.LanguageStateSpace` - Language-state chart over `U.CharacteristicSpace`
+  - `C.2.3` — Unified Formality Characteristic F
+  - `C.2.LS` — `U.LanguageStateFacetProfile` - Thin profile bundle for language-state facets
+  - `C.2.4` — `U.ArticulationExplicitness` — How Explicit Is an Episteme's Meaning for Its Use?
+  - `C.2.5` — `U.LanguageStateClosureDegree` — How Fixed Is the Current Candidate Space?
+  - `C.2.6` — `U.LanguageStateAnchoringMode` — How Is the Episteme Anchored?
+  - `C.2.7` — `U.LanguageStateRepresentationFactorBundle` — How Is the Representation Organized?
+  - `C.2.8` — `U.ExtractableStructuralInformation` — Structure This Reader Can Recover
+  - `C.2.P.DR` — Repair Claims Based on Declarative Form Alone (Declarative Representation Precision Restoration)
+  - `C.3` — Kinds, Intent and Extent, and Typed Reasoning
+  - `C.3.1` — Kind Identity and Subkind Relations (U.Kind and U.SubkindOf)
+  - `C.3.2` — Kind Intent, Membership Judgment, and Extension
+  - `C.3.3` — KindBridge and CL^k — Correspondence between Distinct Kinds
+  - `C.3.4` — KindUseAdaptationDeclaration — Tailor the Use of an Existing Kind
+  - `C.3.5` — KindAT — Intentional Abstraction Facet for Kinds (K0…K3)
+  - `C.3.A` — Typed Guard Macros for Kinds + USM (Annex)
+- Cluster C.II – Domain‑Specific Patterns
+  - `C.11` — Decision Theory (Decsn-CAL)
+  - `C.11.CRC` — Configuration-Relative Contribution Comparison
+  - `C.11.DUA` — Make Advice and Evidence Demands Worth Their Burden
+- Cluster C.III – Meta‑Infrastructure CALs
+  - `C.13` — Constructional Mereology (Compose‑CAL)
+- Cluster C.IV – Composite & Macro‑Scale
+  - `C.16` — Measurement & Metrics Characterization (MM‑CHR)
+  - `C.16.MR` — Construct a Measurement Relation
+  - `C.16.IR` — Determine What a Measurement Indication Can Resolve
+  - `C.16.RM` — Repair a Measurement Model or Arrangement
+  - `C.16.P` — Restore Precision to Characteristic and Scale Wording
+  - `C.16.Q` — Quality-Term Precision Restoration
+  - `C.17` — Characterising Generative Novelty and Value
+  - `C.18` — Open-Ended Search Archive and Front Stewardship
+  - `C.18.1` — Scaling‑Law Lens Binding (SLL)
+  - `C.19` — Explore-Exploit Live-Pool Governor
+  - `C.19.1` — Bitter‑Lesson Preference (BLP)
+  - `C.19.2` — Use-Bounded Apparatus Application
+  - `C.20` — Composition of `U.Discipline` (Discipline-CAL)
+  - `C.21` — Field Health & Structure (Discipline-CHR)
+  - `C.22` — Task Typing and TaskSignature Assignment (Problem-CHR)
+  - `C.22.1` — Task-family adaptation signature
+  - `C.22.PFR` — Problematic-For Relation
+  - `C.22.2` — ProblemCard
+  - `C.23` — MethodFamily Evidence & Maturity (Method‑SoS‑LOG)
+  - `C.24` — Plan Tool or Service Calls for a Fixed Action (C.Agent-Tools-CAL)
+  - `C.25` — Q-Bundle: Express a Quality Claim as One Characteristic or a Structured Bundle
+  - `C.26` — Quantum-Like Modeling Lens
+  - `C.26.1` — Probe-Coupled Boundary Interaction
+  - `C.26.2` — Enacted Distributed State Evidence
+  - `C.26.3` — Viability-Envelope Boundary Regulation
+  - `C.27` — Temporal Claim Adequacy: State Readings, Temporal Trends, and Intervention-Sensitive Change
+  - `C.27.TA` — Temporal Aspect: Time Windows, Rhythm, Cadence, and Currentness
+  - `C.28` — CausalUse-CAL: Causal-Use Questions, Identification, and Realizability
+  - `C.28.CM` — Construct and Challenge a Causal Model
+  - `C.28.MR` — Derive an Intervention Consequence by Mechanism Replacement
+  - `C.29` — Mathematical Lens Use
+  - `C.29.1` — Mathematical Result Transfer
+  - `C.29.2` — Computational Formulation
+  - `C.29.3` — Computational Realization
+  - `C.29.BB` — Construct a Balance across a Boundary
+  - `C.30` — Grounded Architecture and Selected-Structure Adequacy
+  - `C.30.AD` — Architecture Description Adequacy
+  - `C.30.AD.BA` — Built-Asset Architecture Description and Reference Designation
+  - `C.30.P` — Clarify Architecture and Structure Wording (Precision Restoration)
+  - `C.30.STRAT` — Clarify Stratification and Architecture Source Labels
+  - `C.30.ASV` — Architecture Structural View Adequacy (ASV)
+  - `C.30.LCA` — Control Structure View Adequacy (LCA)
+  - `C.30.ILC` — Cross-Scope Architecture Residual Triage
+  - `C.30.TFS-REL` — Use Transformation-Flow Structures and Networks in Architecture
+  - `C.31` — Modularity and Reusable Structure Characteristics
+  - `C.31.RSA` — Reusable Structure Accounting
+  - `C.31.ASAP` — Which Architecture Is Preferable Under Scale? (Scale Amenability)
+  - `C.32` — Architecture Candidate Synthesis
+  - `C.32.P2S` — Problem-to-Structure Architecturing Unfolding
+  - `C.32.HCS` — Architecture-Bearing Family Characteristic Starter Packs
+  - `C.32.ACS` — Architecture Characteristic Criteria Set
+  - `C.32.ACE` — Architecture Characteristic Eval Programs
+  - `C.32.CONWAY` — Architecture-Influence and Transformed-Architecture Correspondence
+  - `C.32.MLAO` — Architecture Candidates to Reduce Cross-Scope Residuals
+  - `C.32.MWA` — Practice Architecture Synthesis from Several Structures
+  - `C.32.FAIL` — Architecture Failure Recognition and Repair
+  - `C.32.PAD` — Project Architecture Decision After Candidate Synthesis
+  - `C.32.ADR` — Architecture Decision Record Projection
+  - `C.32.ADA` — Architecture Decision Adequacy Scales
+  - `C.33` — Assess Structural Information for Architecture Use
+  - `C.34` — Assess Structural Correspondence for Architecture Use (Equivalence and Morphisms)
+  - `C.35` — Assess Generated or Discovered Results for Architecture Use
+  - `C.36` — Cultural Evolution and Cultural-Evolution Engineering
+  - `C.37` — Select and Use Representations for One Action
+  - `C.38` — Construct Comparable Ways to Obtain One Result
+  - `C.39` — Find and Develop a Way to Obtain a Result
+  - `C.39.RO` — Turn a Construction into a Reusable Operation
+  - `C.40` — Develop Branching Search from Reusable Material
+  - `C.40.CD` — Develop Problems and Ways of Solving Them Together
+  - `C.40.CU` — Develop a Useful and Reproducible Use of a Construct
+  - `C.36.P` — Clarify Cultural-Evolution Wording for a Claim or Action
+  - `C.36.RP` — Sustain and Renew Shared Ways of Working
+- Part D - Multi-scale Ethics and Conflict Optimization
+  - `D.1` — Clarify an Ethical Claim's Value Basis (Value Plurality)
+  - `D.2` — Recognize Ethical Concerns Across Levels and Scopes (Multilevel Ethics)
+  - `D.3` — Describe an Ethical Conflict Across Levels or Scopes
+  - `D.4` — Ethical Mediation and Decision Use
+  - `D.5` — Bias Audit and Ethical Assurance
+- Cluster E.I — The FPF Constitution
+  - `E.1` — Vision & Mission: “Operating System for Thought”
+  - `E.2` — FPF's Eleven Pillars and Bitter-Lesson Preference (BLP)
+  - `E.2.DA` — Evaluate How FPF Realizes Its Pillars (Pillar-Adequacy CharacteristicSpace)
+  - `E.3` — Principle Taxonomy, Precedence and Agent Autonomy Profiles (ABL)
+  - `E.4` — FPF Ecosystem Architecture: Framework Families, Products and DPF Suites
+  - `E.4.CM` — Develop Composite Methods as Framework Contributions
+  - `E.4.FPF` — FPF Edition Assembly: Publication Forms, Carriers and Access Routes
+  - `E.4.PFAD` — Principle-Framework Architecture Decision
+  - `E.4.DPF` — Domain and Local Principle Frameworks: Whether and How to Author and Publish
+  - `E.4.DPF.DA` — Evaluate a DPF or LPF Package for Its Declared Use (Package-Adequacy CharacteristicSpace)
+  - `E.4.PFR` — Pattern-Framework Relation and Edition Discipline
+  - `E.4.PFIP` — Principle-Framework Publication Integration and Preservation
+  - `E.5` — Four Guard‑Rails of FPF
+  - `E.5.1` — DevOps Lexical Firewall
+  - `E.5.2` — Notational Independence
+  - `E.5.3` — Unidirectional Dependency between FPF Families
+  - `E.5.4` — Cross‑Disciplinary Bias Audit
+- Cluster E.II — The Author’s Handbook
+  - `E.6` — Didactic Architecture of the FPF Specification
+  - `E.7` — Archetypal Grounding: Explain Rules of FPF Architectural Patterns through Cases
+  - `E.8` — FPF Authoring Conventions & Style Guide
+  - `E.8.ECSPF` — Author an FPF Pattern from an Accepted Evaluation CharacteristicSpace Specification
+  - `E.9` — Design-Rationale Record (DRR) for FPF Content Decisions
+  - `E.9.DA` — Evaluate a DRR for Its Declared Authoring Use (Decision-Adequacy CharacteristicSpace)
+  - `E.10` — Unified Lexical Rules for FPF
+  - `E.10.LRN` — Recovering What “Learning” Means in the Current Claim
+  - `E.10.INT` — Recovering What Interest or Curiosity Means Here
+  - `E.10.DEV` — Recovering What Development or Evolution Means in the Current Claim
+  - `E.10.MOVE` — Move, Readiness and Trajectory Wording Precision Restoration
+  - `E.10.ARCH` — Wording-Use Ontological Precision Restoration Architecture
+  - `E.10.ROLE` — Recovering What “Role” Means in the Current Claim
+  - `E.10.P` — Conceptual Prefixes policy & registry
+  - `E.10.D1` — Recovering What “Context” Means in Use
+  - `E.10.D2` — EntityOfConcern, Description Episteme, and Specification-Use Discipline
+  - `E.11` — First-Practical Entry and Pattern-Use Discoverability Discipline
+  - `E.11.PUA` — Pattern Use in a Working Situation and First Useful Result
+  - `E.11.PUR` — Pattern-Use Applicability, Recommendation, and Coordination
+  - `E.11.PFP` — Framework Publication Form Profile for Markdown
+  - `E.11.DSG` — DPF Suite Reference
+  - `E.12` — Didactic Primacy & Cognitive Ergonomics
+  - `E.13` — Pragmatic Utility and Proxy-to-Value Alignment
+  - `E.14` — Human-Centric Working-Model: Readable Claims and Recoverable Assurance
+  - `E.15` — Pattern Change, Edition Continuity, and Impact Analysis
+  - `E.16` — RoC‑Autonomy Budget & Enforcement
+  - `E.17.0` — Viewpoint and View Recognition for Multi-View Describing
+  - `E.17.1` — Viewpoint Bundle Library - Reusable Viewpoint Reference Bundles
+  - `E.17.2` — TEVB - Project-local Typical Engineering Viewpoint Bundle Template for Holons
+  - `E.17` — Multi‑View Publication Kit
+  - `E.17.EFP` — ExplanationFaithfulnessProfile — explanation-use discipline over existing MVPK faces
+  - `E.17.ID.CR` — Compare Sources Within a Shared Review Frame (ComparativeReviewUnit)
+  - `E.17.AUD` — PublicationUnit Stability Discipline - keep one publication unit stable enough to read honestly
+  - `E.17.AUD.LHR` — PublicationUnit Stability Discipline and Local Head Restoration - repair the overloaded local lexical head before the publication unit inherits it
+  - `E.17.AUD.OOTD` — PublicationUnit Stability Discipline and PublicationUnit Primary-Subject Discipline - publication-unit stability over one primary subject
+  - `E.18` — Transformation Flow Structure
+  - `E.18.1` — P2W Problem-to-Work Carry-Through
+  - `E.18.2` — Transformation Flow Mathematical Description
+  - `E.18.3` — Constraint-Governed Transformation-Flow Unfolding Structure
+  - `E.18.NET` — Network of Transformation-Flow Structures
+  - `E.19` — Pattern Quality Gates: Review and Refresh Profiles
+  - `E.20` — Mechanism Introduction Protocol: Introduce or Revise FPF Mechanisms
+  - `E.21` — FPF Pattern-Quality Evaluation CharacteristicSpace
+  - `E.22` — Improvement-Oriented Quality Evaluation Question Framing
+  - `E.23` — Quality Improvement Loop Method
+  - `E.23.CDI` — Developing Capability for a Named Work Family
+  - `E.23.CAE` — Capability Access and Expression Differential Probe
+  - `E.24` — U.Ontic and Ontic Introduction Discipline
+  - `E.24.CD` — Ontic Candidate Detection and First-Use Disposition
+  - `E.24.PUB` — Episteme Publication: Availability, Form and Carrier
+  - `E.24.UK` — U-kind Admission and Ontic Settlement
+- Part F - The Unification Suite (U-Suite): Concept Sets, SenseCells, and System-Role Kinds and Assignments
+  - `F.0.1` — Source-Local Meaning Recovery
+  - `F.0.2` — Conceptual Synthesis across Source Ontologies
+- Cluster F.I — Context of Meaning and Lexical Inputs
+  - `F.1` — Question-Relative Source Selection
+  - `F.2` — Source-Local Term Harvesting & Normalisation
+  - `F.3` — Source-Local Sense Clustering
+- Cluster F.II — Concept Sets, System-Role Kinds, Assignments, and Descriptions (definition, naming, decision)
+  - `F.4` — SystemRoleKindDescription — Describing an Exact System-Role Kind
+  - `F.5` — Name U-kinds, Local System-Role Kinds and SystemRoleKindDescriptions
+  - `F.6` — SystemRoleAssignment and Performed-Work Attribution Check
+  - `F.7` — Display Source-Local Comparisons in a Concept-Set Table
+  - `F.8` — Mint-or-Reuse Decision for a Name
+- Cluster F.III — Cross‑Context Alignment & Applied Bindings
+  - `F.9` — Relate Local Meanings across Contexts (Alignment and Bridge)
+  - `F.9.1` — Bridge Stance Note — Clarify a Bounded Use
+  - `F.10` — Apply and Interpret Evidence, Standard and Requirement Statuses
+  - `F.11` — Distinguish Method, MethodDescription, Work and Outputs
+  - `F.12` — Evaluate Promise Fulfilment from Work Evidence (Service Acceptance)
+- Cluster F.IV — Lexical Development Cycle, Growth Control, Tests & Examples
+  - `F.13` — Lexical Continuity & Deprecation
+  - `F.14` — Anti-Explosion Control for System-Role and Status Name Families
+  - `F.15` — Static and Regression Conformance Harness for Naming and Semantic Unification
+  - `F.16` — Worked-Example Template (Cross-Domain)
+  - `F.17` — Make a Settled Naming Decision Recoverable for Reuse (Unified Term Sheet)
+  - `F.18` — Local-First Unification Naming Protocol
+  - `F.19` — Ontology-First Plain Technical Rewriting
+- Part G - Discipline SoTA Patterns Kit
+  - `G.Core` — Discipline SoTA Kit Invariants, Defaults and Refresh Triggers (Part G)
+  - `G.0` — Define Admissible Comparison and Aggregation for a Frame (CG-Spec)
+  - `G.1` — Author a Reusable CG-Frame Generator and Selector Kit
+  - `G.2` — Harvest and Synthesize SoTA for a CG-Frame
+  - `G.3` — CHR Authoring for a CG‑Frame: Characteristics, Scales, Levels, Coordinates
+  - `G.4` — CAL Authoring for a CG-Frame: Operators, Acceptance Clauses, Evidence Wiring
+  - `G.5` — Method-Family Registry, Dispatch and Selected-Set Result Declaration
+  - `G.6` — Evidence Graph and Provenance Ledger: Citable Evidence-Provenance Paths
+  - `G.7` — Cross‑Tradition Bridge Calibration Kit (BridgeMatrix → BridgeCards + BCT/Sentinels)
+  - `G.8` — Package Method-Family Admissibility Rules and Maturity Ladders (SoS-LOG)
+  - `G.9` — Parity and Benchmark Harness
+  - `G.10` — SoTA Pack Shipping
+  - `G.11` — Decide Whether and How to Refresh SoTA Packs and Related Results (Telemetry and Decay)
+  - `G.12` — DHC Dashboards (Discipline-Health Time Series and Views)
+  - `G.13` — External Interop Hooks for SoTA Discipline Packs (conceptual)
+- Part I - Annexes & Extended Tutorials
+  - `I.2` — Choose a First Pattern: Expanded Entry Disambiguation Cases
